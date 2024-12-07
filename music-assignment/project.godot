@@ -11,5 +11,10 @@ config_version=5
 [application]
 
 config/name="Music Assignment"
+run/main_scene="res://my_assignment.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[gui]
+
+common/snap_controls_to_pixels=false
