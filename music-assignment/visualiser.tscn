@@ -1,9 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://oxga1wcao7bb"]
+[gd_scene load_steps=15 format=3 uid="uid://oxga1wcao7bb"]
 
 [ext_resource type="Script" path="res://visualiser.gd" id="1_2dcoq"]
-[ext_resource type="AudioStream" uid="uid://dr4cthhlnas3q" path="res://Travis-Scott-FE-N-(HipHopKit.com).mp3" id="2_stqkv"]
+[ext_resource type="AudioStream" uid="uid://bmw5ctc54oe08" path="res://freemusicbg.com-Latin Industries.mp3" id="2_n6n0r"]
 [ext_resource type="Script" path="res://audio1.gd" id="3_3t6ap"]
 [ext_resource type="Texture2D" uid="uid://caaon37vwoh0p" path="res://black-circle.png" id="3_ov3ci"]
+[ext_resource type="AudioStream" uid="uid://bmhyd4q5pg2vx" path="res://mcdonalds-noises.mp3" id="5_y685w"]
+[ext_resource type="AudioStream" uid="uid://7yijmo55xmqw" path="res://sus-meme-sound-181271.mp3" id="6_6rpih"]
+[ext_resource type="AudioStream" uid="uid://wdo7gu6u47e3" path="res://metal-pipe-falling-made-with-Voicemod.mp3" id="7_lma6w"]
+[ext_resource type="AudioStream" uid="uid://bryk0nhyv8647" path="res://24786__young_daddy__clap-mix.wav" id="8_olth7"]
+[ext_resource type="AudioStream" uid="uid://bs5w63c4b8cj7" path="res://147597__kendallbear__never-be-clap.wav" id="9_yyu8l"]
+[ext_resource type="AudioStream" uid="uid://jiw2sg5sj1tb" path="res://41426__sandyrb__amgp-snare-001.wav" id="10_cp65a"]
+[ext_resource type="AudioStream" uid="uid://bbks0c8ld635v" path="res://87726__thealmightysound__hi-hat-open.wav" id="11_roy2g"]
+[ext_resource type="AudioStream" uid="uid://bjjc2jurp5vwj" path="res://129074__harha__hardstyle-kick-01-reversed-bass-harha.wav" id="12_p802j"]
+[ext_resource type="AudioStream" uid="uid://dy3c31mcf4lfk" path="res://351222__arctis__hardstyle-bass-kick-9-with-reverb.wav" id="13_iynnp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8o0gx"]
+shadow_offset = Vector2(3, 3)
 
 [node name="Visualiser" type="Control"]
 layout_mode = 3
@@ -15,44 +27,53 @@ grow_vertical = 2
 script = ExtResource("1_2dcoq")
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_stqkv")
+stream = ExtResource("2_n6n0r")
 bus = &"Music"
 script = ExtResource("3_3t6ap")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 777.0
-offset_top = 92.0
-offset_right = 819.0
-offset_bottom = 134.0
+offset_left = 688.0
+offset_top = 32.0
+offset_right = 770.0
+offset_bottom = 74.0
 scale = Vector2(0.994097, 1)
 text = "Play Song"
 
 [node name="PitchScale" type="HSlider" parent="."]
 layout_mode = 0
-offset_left = 714.0
-offset_top = 213.0
-offset_right = 1102.0
-offset_bottom = 229.0
+offset_left = 688.0
+offset_top = 192.0
+offset_right = 1030.0
+offset_bottom = 208.0
 max_value = 4.0
 step = 0.01
+value = 1.0
 allow_lesser = true
 scrollable = false
 
 [node name="ButtonPh" type="Button" parent="."]
 layout_mode = 0
-offset_left = 919.0
-offset_top = 92.0
-offset_right = 927.0
-offset_bottom = 100.0
-text = "Phaser Off"
+offset_left = 688.0
+offset_top = 236.0
+offset_right = 782.0
+offset_bottom = 267.0
+text = "Phaser: Off"
+
+[node name="ButtonRev" type="Button" parent="."]
+layout_mode = 0
+offset_left = 688.0
+offset_top = 331.0
+offset_right = 783.0
+offset_bottom = 362.0
+text = "Reverb: Off"
 
 [node name="Phaser" type="HSlider" parent="."]
 layout_mode = 0
-offset_left = 714.0
-offset_top = 282.0
-offset_right = 1102.0
-offset_bottom = 298.0
+offset_left = 688.0
+offset_top = 288.0
+offset_right = 1030.0
+offset_bottom = 304.0
 max_value = 20.0
 step = 0.01
 allow_lesser = true
@@ -1370,7 +1391,215 @@ rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
 color = Color(0.898039, 0, 0.101961, 1)
 
+[node name="PitchRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 684.0
+offset_top = 142.0
+offset_right = 774.0
+offset_bottom = 172.0
+color = Color(0.166842, 0.207092, 0.299363, 1)
+
+[node name="PitchLabel" type="Label" parent="PitchRect"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 87.0
+offset_bottom = 27.0
+text = "Pitch Scale"
+label_settings = SubResource("LabelSettings_8o0gx")
+
+[node name="Volume" type="VSlider" parent="."]
+layout_mode = 0
+offset_left = 1078.0
+offset_top = 142.0
+offset_right = 1094.0
+offset_bottom = 459.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="VolRect" type="ColorRect" parent="Volume"]
+layout_mode = 0
+offset_left = -27.0
+offset_top = -47.0
+offset_right = 42.0
+offset_bottom = -17.0
+color = Color(0.166842, 0.207092, 0.299363, 1)
+
+[node name="VolLabel" type="Label" parent="Volume/VolRect"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 87.0
+offset_bottom = 27.0
+text = "Volume"
+label_settings = SubResource("LabelSettings_8o0gx")
+
+[node name="Pause" type="Button" parent="."]
+layout_mode = 0
+offset_left = 804.0
+offset_top = 32.0
+offset_right = 886.0
+offset_bottom = 74.0
+text = "Pause Song"
+
+[node name="ButtonHPF" type="Button" parent="."]
+layout_mode = 0
+offset_left = 873.0
+offset_top = 377.0
+offset_right = 1033.0
+offset_bottom = 408.0
+text = "High Pass Filter: Off"
+
+[node name="ButtonLPF" type="Button" parent="."]
+layout_mode = 0
+offset_left = 688.0
+offset_top = 377.0
+offset_right = 848.0
+offset_bottom = 408.0
+text = "Low Pass Filter: Off"
+
+[node name="ButtonCh" type="Button" parent="."]
+layout_mode = 0
+offset_left = 873.0
+offset_top = 331.0
+offset_right = 969.0
+offset_bottom = 362.0
+text = "Chorus: Off"
+
+[node name="maccies" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_y685w")
+bus = &"Music"
+
+[node name="screech" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_6rpih")
+bus = &"Music"
+
+[node name="pipe" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_lma6w")
+bus = &"Music"
+
+[node name="clap1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_olth7")
+bus = &"Music"
+
+[node name="clap2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_yyu8l")
+bus = &"Music"
+
+[node name="snare" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_cp65a")
+bus = &"Music"
+
+[node name="hihat" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_roy2g")
+bus = &"Music"
+
+[node name="kick1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_p802j")
+bus = &"Music"
+
+[node name="kick2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_iynnp")
+bus = &"Music"
+
+[node name="macciesbutton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 665.0
+offset_top = 591.0
+offset_right = 842.0
+offset_bottom = 622.0
+text = "McDonald's"
+
+[node name="ScreechB" type="Button" parent="."]
+layout_mode = 0
+offset_left = 757.0
+offset_top = 443.0
+offset_right = 934.0
+offset_bottom = 474.0
+text = "Hell's Kitchen Screech"
+
+[node name="PipeB" type="Button" parent="."]
+layout_mode = 0
+offset_left = 848.0
+offset_top = 591.0
+offset_right = 1025.0
+offset_bottom = 622.0
+text = "Metal Pipe"
+
+[node name="clap1B" type="Button" parent="."]
+layout_mode = 0
+offset_left = 665.0
+offset_top = 479.0
+offset_right = 842.0
+offset_bottom = 510.0
+text = "Single Clap"
+
+[node name="clap2B" type="Button" parent="."]
+layout_mode = 0
+offset_left = 848.0
+offset_top = 479.0
+offset_right = 1025.0
+offset_bottom = 510.0
+text = "Multiple Claps"
+
+[node name="snareB" type="Button" parent="."]
+layout_mode = 0
+offset_left = 665.0
+offset_top = 519.0
+offset_right = 842.0
+offset_bottom = 550.0
+text = "Snare"
+
+[node name="hihatB" type="Button" parent="."]
+layout_mode = 0
+offset_left = 848.0
+offset_top = 519.0
+offset_right = 1025.0
+offset_bottom = 550.0
+text = "Hi-Hat"
+
+[node name="kick1B" type="Button" parent="."]
+layout_mode = 0
+offset_left = 848.0
+offset_top = 556.0
+offset_right = 1025.0
+offset_bottom = 587.0
+text = "Reverse Bass Kick"
+
+[node name="kick2B" type="Button" parent="."]
+layout_mode = 0
+offset_left = 665.0
+offset_top = 556.0
+offset_right = 842.0
+offset_bottom = 587.0
+text = "Bass Kick"
+
+[node name="copyright" type="Label" parent="."]
+layout_mode = 0
+offset_left = 915.0
+offset_top = 631.0
+offset_right = 1245.0
+offset_bottom = 654.0
+scale = Vector2(0.71, 0.71)
+text = "Song is 'Latin Industries' by Kevin MacLeod"
+
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="value_changed" from="PitchScale" to="." method="_on_pitch_scale_value_changed"]
 [connection signal="button_down" from="ButtonPh" to="." method="_on_button_ph_button_down"]
+[connection signal="button_down" from="ButtonRev" to="." method="_on_button_rev_button_down"]
 [connection signal="value_changed" from="Phaser" to="." method="_on_phaser_value_changed"]
+[connection signal="value_changed" from="Volume" to="." method="_on_volume_value_changed"]
+[connection signal="button_down" from="Pause" to="." method="_on_pause_button_down"]
+[connection signal="button_down" from="ButtonHPF" to="." method="_on_button_hpf_button_down"]
+[connection signal="button_down" from="ButtonLPF" to="." method="_on_button_lpf_button_down"]
+[connection signal="button_down" from="ButtonCh" to="." method="_on_button_ch_button_down"]
+[connection signal="button_down" from="macciesbutton" to="." method="_on_test_button_down"]
+[connection signal="button_down" from="ScreechB" to="." method="_on_screech_b_button_down"]
+[connection signal="button_down" from="PipeB" to="." method="_on_pipe_b_button_down"]
+[connection signal="button_down" from="clap1B" to="." method="_on_clap_1b_button_down"]
+[connection signal="button_down" from="clap2B" to="." method="_on_clap_2b_button_down"]
+[connection signal="button_down" from="snareB" to="." method="_on_snare_b_button_down"]
+[connection signal="button_down" from="hihatB" to="." method="_on_hihat_b_button_down"]
+[connection signal="button_down" from="kick1B" to="." method="_on_kick_1b_button_down"]
+[connection signal="button_down" from="kick2B" to="." method="_on_kick_2b_button_down"]
