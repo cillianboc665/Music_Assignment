@@ -20,11 +20,43 @@ bus = &"Music"
 script = ExtResource("3_3t6ap")
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 777.0
 offset_top = 92.0
-offset_right = 818.0
-offset_bottom = 123.0
-text = "Play"
+offset_right = 819.0
+offset_bottom = 134.0
+scale = Vector2(0.994097, 1)
+text = "Play Song"
+
+[node name="PitchScale" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 714.0
+offset_top = 213.0
+offset_right = 1102.0
+offset_bottom = 229.0
+max_value = 4.0
+step = 0.01
+allow_lesser = true
+scrollable = false
+
+[node name="ButtonPh" type="Button" parent="."]
+layout_mode = 0
+offset_left = 919.0
+offset_top = 92.0
+offset_right = 927.0
+offset_bottom = 100.0
+text = "Phaser Off"
+
+[node name="Phaser" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 714.0
+offset_top = 282.0
+offset_right = 1102.0
+offset_bottom = 298.0
+max_value = 20.0
+step = 0.01
+allow_lesser = true
+scrollable = false
 
 [node name="Circle" type="TextureRect" parent="."]
 layout_mode = 0
@@ -70,6 +102,7 @@ offset_top = 23.8571
 offset_right = -22.5714
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.898039, 0, 0.101961, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -78,6 +111,7 @@ offset_top = 23.8571
 offset_right = -19.7143
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(1, 0.431373, 0.129412, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -86,6 +120,7 @@ offset_top = 23.8571
 offset_right = -17.0
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.85098, 0.690196, 0, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -94,6 +129,7 @@ offset_top = 23.8571
 offset_right = -14.1429
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.741121, 0.803014, 2.31028e-06, 1)
 
 [node name="ColorRect5" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -102,6 +138,7 @@ offset_top = 23.8571
 offset_right = -11.4286
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.878431, 0, 1)
 
 [node name="ColorRect6" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -110,6 +147,7 @@ offset_top = 23.8571
 offset_right = -8.71428
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.894118, 0.533333, 1)
 
 [node name="ColorRect7" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -118,6 +156,7 @@ offset_top = 23.8571
 offset_right = -5.85714
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(6.54578e-06, 0.871509, 0.770319, 1)
 
 [node name="ColorRect8" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -126,6 +165,7 @@ offset_top = 23.8571
 offset_right = -3.14286
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.764706, 0.854902, 1)
 
 [node name="ColorRect9" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -134,6 +174,7 @@ offset_top = 23.8571
 offset_right = -0.428571
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.615686, 0.980392, 1)
 
 [node name="ColorRect10" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -142,6 +183,7 @@ offset_top = 23.8571
 offset_right = 2.71429
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.619608, 1, 1)
 
 [node name="ColorRect11" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -150,6 +192,7 @@ offset_top = 23.8571
 offset_right = 5.57143
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.470588, 1, 1)
 
 [node name="ColorRect12" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -158,6 +201,7 @@ offset_top = 23.8571
 offset_right = 8.28571
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.564706, 0.423529, 1, 1)
 
 [node name="ColorRect13" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -166,6 +210,7 @@ offset_top = 23.8571
 offset_right = 11.1429
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.670721, 0.407102, 0.874003, 1)
 
 [node name="ColorRect14" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -174,6 +219,7 @@ offset_top = 23.8571
 offset_right = 14.0
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.831373, 0.278431, 0.792157, 1)
 
 [node name="ColorRect15" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -182,6 +228,7 @@ offset_top = 23.8571
 offset_right = 16.8571
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.941908, 6.79606e-05, 0.716893, 1)
 
 [node name="ColorRect16" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -190,6 +237,7 @@ offset_top = 23.8571
 offset_right = 19.5714
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.996078, 0, 0.443137, 1)
 
 [node name="ColorRect17" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -198,6 +246,7 @@ offset_top = 23.8571
 offset_right = 22.4286
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.996078, 0, 0.443137, 1)
 
 [node name="ColorRect18" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -206,6 +255,7 @@ offset_top = 23.8571
 offset_right = 25.1429
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.941176, 0, 0.717647, 1)
 
 [node name="ColorRect19" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -214,6 +264,7 @@ offset_top = 23.8571
 offset_right = 27.8571
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.831373, 0.278431, 0.792157, 1)
 
 [node name="ColorRect20" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -222,6 +273,7 @@ offset_top = 23.8571
 offset_right = 30.5714
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.670588, 0.407843, 0.87451, 1)
 
 [node name="ColorRect21" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -230,6 +282,7 @@ offset_top = 23.8571
 offset_right = 33.2857
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.564706, 0.423529, 1, 1)
 
 [node name="ColorRect22" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -238,6 +291,7 @@ offset_top = 23.8571
 offset_right = 36.1429
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.470588, 1, 1)
 
 [node name="ColorRect23" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -246,6 +300,7 @@ offset_top = 23.8571
 offset_right = 39.0
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.619608, 1, 1)
 
 [node name="ColorRect24" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -254,6 +309,7 @@ offset_top = 23.8571
 offset_right = 42.0
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.615686, 0.980392, 1)
 
 [node name="ColorRect25" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -262,6 +318,7 @@ offset_top = 23.8571
 offset_right = 44.8571
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.764706, 0.854902, 1)
 
 [node name="ColorRect26" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -270,6 +327,7 @@ offset_top = 23.8571
 offset_right = 47.7143
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.870588, 0.768627, 1)
 
 [node name="ColorRect27" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -278,6 +336,7 @@ offset_top = 23.8571
 offset_right = 50.4286
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.894118, 0.533333, 1)
 
 [node name="ColorRect28" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -286,6 +345,7 @@ offset_top = 23.8571
 offset_right = 53.1429
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.878431, 0, 1)
 
 [node name="ColorRect29" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -294,6 +354,7 @@ offset_top = 23.8571
 offset_right = 56.0
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.741176, 0.803922, 0, 1)
 
 [node name="ColorRect30" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -302,6 +363,7 @@ offset_top = 23.8571
 offset_right = 58.7143
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.85098, 0.690196, 0, 1)
 
 [node name="ColorRect31" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -310,6 +372,7 @@ offset_top = 23.8571
 offset_right = 61.5714
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(1, 0.431373, 0.129412, 1)
 
 [node name="ColorRect32" type="ColorRect" parent="Circle/right/bottom"]
 layout_mode = 0
@@ -318,6 +381,7 @@ offset_top = 23.8571
 offset_right = 64.4286
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.898039, 0, 0.101961, 1)
 
 [node name="top" type="Control" parent="Circle/right"]
 layout_mode = 1
@@ -342,6 +406,7 @@ offset_right = -22.5714
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.898039, 0, 0.101961, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -351,6 +416,7 @@ offset_right = -19.7143
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(1, 0.431373, 0.129412, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -360,6 +426,7 @@ offset_right = -17.0
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.85098, 0.690196, 0, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -369,6 +436,7 @@ offset_right = -14.1429
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.741176, 0.803922, 0, 1)
 
 [node name="ColorRect5" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -378,6 +446,7 @@ offset_right = -11.4286
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.878431, 0, 1)
 
 [node name="ColorRect6" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -387,6 +456,7 @@ offset_right = -8.71428
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.894118, 0.533333, 1)
 
 [node name="ColorRect7" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -396,6 +466,7 @@ offset_right = -5.85714
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.870588, 0.768627, 1)
 
 [node name="ColorRect8" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -405,6 +476,7 @@ offset_right = -3.14286
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.764706, 0.854902, 1)
 
 [node name="ColorRect9" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -414,6 +486,7 @@ offset_right = -0.428571
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.615686, 0.980392, 1)
 
 [node name="ColorRect10" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -423,6 +496,7 @@ offset_right = 2.71429
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.619608, 1, 1)
 
 [node name="ColorRect11" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -432,6 +506,7 @@ offset_right = 5.57143
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.470588, 1, 1)
 
 [node name="ColorRect12" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -441,6 +516,7 @@ offset_right = 8.28571
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.564706, 0.423529, 1, 1)
 
 [node name="ColorRect13" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -450,6 +526,7 @@ offset_right = 11.1429
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.670588, 0.407843, 0.87451, 1)
 
 [node name="ColorRect14" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -459,6 +536,7 @@ offset_right = 14.0
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.831373, 0.278431, 0.792157, 1)
 
 [node name="ColorRect15" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -468,6 +546,7 @@ offset_right = 16.8571
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.941176, 0, 0.717647, 1)
 
 [node name="ColorRect16" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -477,6 +556,7 @@ offset_right = 19.5714
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.996078, 0, 0.443137, 1)
 
 [node name="ColorRect17" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -486,6 +566,7 @@ offset_right = 22.4286
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.996078, 0, 0.443137, 1)
 
 [node name="ColorRect18" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -495,6 +576,7 @@ offset_right = 25.1429
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.941176, 0, 0.717647, 1)
 
 [node name="ColorRect19" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -504,6 +586,7 @@ offset_right = 27.8571
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.831373, 0.278431, 0.792157, 1)
 
 [node name="ColorRect20" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -513,6 +596,7 @@ offset_right = 30.5714
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.670588, 0.407843, 0.87451, 1)
 
 [node name="ColorRect21" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -522,6 +606,7 @@ offset_right = 33.2857
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.564706, 0.423529, 1, 1)
 
 [node name="ColorRect22" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -531,6 +616,7 @@ offset_right = 36.1429
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.470588, 1, 1)
 
 [node name="ColorRect23" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -540,6 +626,7 @@ offset_right = 39.0
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.619608, 1, 1)
 
 [node name="ColorRect24" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -549,6 +636,7 @@ offset_right = 42.0
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.615686, 0.980392, 1)
 
 [node name="ColorRect25" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -558,6 +646,7 @@ offset_right = 44.8571
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.764706, 0.854902, 1)
 
 [node name="ColorRect26" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -567,6 +656,7 @@ offset_right = 47.7143
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.870588, 0.768627, 1)
 
 [node name="ColorRect27" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -576,6 +666,7 @@ offset_right = 50.4286
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.894118, 0.533333, 1)
 
 [node name="ColorRect28" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -585,6 +676,7 @@ offset_right = 53.1429
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.878431, 0, 1)
 
 [node name="ColorRect29" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -594,6 +686,7 @@ offset_right = 56.0
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.741176, 0.803922, 0, 1)
 
 [node name="ColorRect30" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -603,6 +696,7 @@ offset_right = 58.7143
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.85098, 0.690196, 0, 1)
 
 [node name="ColorRect31" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -612,6 +706,7 @@ offset_right = 61.5714
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(1, 0.43263, 0.128174, 1)
 
 [node name="ColorRect32" type="ColorRect" parent="Circle/right/top"]
 layout_mode = 0
@@ -621,6 +716,7 @@ offset_right = 64.4286
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.898039, 0, 0.101961, 1)
 
 [node name="left" type="Control" parent="Circle"]
 layout_mode = 1
@@ -658,6 +754,7 @@ offset_top = 23.8571
 offset_right = -22.5714
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.898039, 0, 0.101961, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -666,6 +763,7 @@ offset_top = 23.8571
 offset_right = -19.7143
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(1, 0.431373, 0.129412, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -674,6 +772,7 @@ offset_top = 23.8571
 offset_right = -17.0
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.85098, 0.690196, 0, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -682,6 +781,7 @@ offset_top = 23.8571
 offset_right = -14.1429
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.741176, 0.803922, 0, 1)
 
 [node name="ColorRect5" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -690,6 +790,7 @@ offset_top = 23.8571
 offset_right = -11.4286
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.878431, 0, 1)
 
 [node name="ColorRect6" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -698,6 +799,7 @@ offset_top = 23.8571
 offset_right = -8.71428
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.895213, 0.534227, 1)
 
 [node name="ColorRect7" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -706,6 +808,7 @@ offset_top = 23.8571
 offset_right = -5.85714
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.870588, 0.768627, 1)
 
 [node name="ColorRect8" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -714,6 +817,7 @@ offset_top = 23.8571
 offset_right = -3.14286
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.764706, 0.854902, 1)
 
 [node name="ColorRect9" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -722,6 +826,7 @@ offset_top = 23.8571
 offset_right = -0.428571
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.615686, 0.980392, 1)
 
 [node name="ColorRect10" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -730,6 +835,7 @@ offset_top = 23.8571
 offset_right = 2.71429
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.619608, 1, 1)
 
 [node name="ColorRect11" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -738,6 +844,7 @@ offset_top = 23.8571
 offset_right = 5.57143
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.470588, 1, 1)
 
 [node name="ColorRect12" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -746,6 +853,7 @@ offset_top = 23.8571
 offset_right = 8.28571
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.564706, 0.423529, 1, 1)
 
 [node name="ColorRect13" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -754,6 +862,7 @@ offset_top = 23.8571
 offset_right = 11.1429
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.670588, 0.407843, 0.87451, 1)
 
 [node name="ColorRect14" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -762,6 +871,7 @@ offset_top = 23.8571
 offset_right = 14.0
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.831373, 0.278431, 0.792157, 1)
 
 [node name="ColorRect15" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -770,6 +880,7 @@ offset_top = 23.8571
 offset_right = 16.8571
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.941176, 0, 0.717647, 1)
 
 [node name="ColorRect16" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -778,6 +889,7 @@ offset_top = 23.8571
 offset_right = 19.5714
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.996078, 0, 0.443137, 1)
 
 [node name="ColorRect17" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -786,6 +898,7 @@ offset_top = 23.8571
 offset_right = 22.4286
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.996078, 0, 0.443137, 1)
 
 [node name="ColorRect18" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -794,6 +907,7 @@ offset_top = 23.8571
 offset_right = 25.1429
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.941176, 0, 0.717647, 1)
 
 [node name="ColorRect19" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -802,6 +916,7 @@ offset_top = 23.8571
 offset_right = 27.8571
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.831373, 0.278431, 0.792157, 1)
 
 [node name="ColorRect20" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -810,6 +925,7 @@ offset_top = 23.8571
 offset_right = 30.5714
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.670588, 0.407843, 0.87451, 1)
 
 [node name="ColorRect21" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -818,6 +934,7 @@ offset_top = 23.8571
 offset_right = 33.2857
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.564706, 0.423529, 1, 1)
 
 [node name="ColorRect22" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -826,6 +943,7 @@ offset_top = 23.8571
 offset_right = 36.1429
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.470588, 1, 1)
 
 [node name="ColorRect23" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -834,6 +952,7 @@ offset_top = 23.8571
 offset_right = 39.0
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.619608, 1, 1)
 
 [node name="ColorRect24" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -842,6 +961,7 @@ offset_top = 23.8571
 offset_right = 42.0
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.615686, 0.980392, 1)
 
 [node name="ColorRect25" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -850,6 +970,7 @@ offset_top = 23.8571
 offset_right = 44.8571
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.764706, 0.854902, 1)
 
 [node name="ColorRect26" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -858,6 +979,7 @@ offset_top = 23.8571
 offset_right = 47.7143
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.870588, 0.768627, 1)
 
 [node name="ColorRect27" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -866,6 +988,7 @@ offset_top = 23.8571
 offset_right = 50.4286
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.894118, 0.533333, 1)
 
 [node name="ColorRect28" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -874,6 +997,7 @@ offset_top = 23.8571
 offset_right = 53.1429
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.878431, 0, 1)
 
 [node name="ColorRect29" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -882,6 +1006,7 @@ offset_top = 23.8571
 offset_right = 56.0
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.741176, 0.803922, 0, 1)
 
 [node name="ColorRect30" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -890,6 +1015,7 @@ offset_top = 23.8571
 offset_right = 58.7143
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.85098, 0.690196, 0, 1)
 
 [node name="ColorRect31" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -898,6 +1024,7 @@ offset_top = 23.8571
 offset_right = 61.5714
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(1, 0.431373, 0.129412, 1)
 
 [node name="ColorRect32" type="ColorRect" parent="Circle/left/bottom"]
 layout_mode = 0
@@ -906,6 +1033,7 @@ offset_top = 23.8571
 offset_right = 64.4286
 offset_bottom = 24.8571
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.898039, 0, 0.101961, 1)
 
 [node name="top" type="Control" parent="Circle/left"]
 layout_mode = 1
@@ -930,6 +1058,7 @@ offset_right = -22.5714
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.896339, 0, 0.103243, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -939,6 +1068,7 @@ offset_right = -19.7143
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(1, 0.431373, 0.129412, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -948,6 +1078,7 @@ offset_right = -17.0
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.85098, 0.690196, 0, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -957,6 +1088,7 @@ offset_right = -14.1429
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.741176, 0.803922, 0, 1)
 
 [node name="ColorRect5" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -966,6 +1098,7 @@ offset_right = -11.4286
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.878431, 0, 1)
 
 [node name="ColorRect6" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -975,6 +1108,7 @@ offset_right = -8.71428
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.894118, 0.533333, 1)
 
 [node name="ColorRect7" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -984,6 +1118,7 @@ offset_right = -5.85714
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.870588, 0.768627, 1)
 
 [node name="ColorRect8" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -993,6 +1128,7 @@ offset_right = -3.14286
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.764706, 0.854902, 1)
 
 [node name="ColorRect9" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1002,6 +1138,7 @@ offset_right = -0.428571
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.615686, 0.980392, 1)
 
 [node name="ColorRect10" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1011,6 +1148,7 @@ offset_right = 2.71429
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.619608, 1, 1)
 
 [node name="ColorRect11" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1020,6 +1158,7 @@ offset_right = 5.57143
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.470588, 1, 1)
 
 [node name="ColorRect12" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1029,6 +1168,7 @@ offset_right = 8.28571
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.564706, 0.423529, 1, 1)
 
 [node name="ColorRect13" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1038,6 +1178,7 @@ offset_right = 11.1429
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.670588, 0.407843, 0.87451, 1)
 
 [node name="ColorRect14" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1047,6 +1188,7 @@ offset_right = 14.0
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.831373, 0.278431, 0.792157, 1)
 
 [node name="ColorRect15" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1056,6 +1198,7 @@ offset_right = 16.8571
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.941176, 0, 0.717647, 1)
 
 [node name="ColorRect16" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1065,6 +1208,7 @@ offset_right = 19.5714
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.996078, 0, 0.443137, 1)
 
 [node name="ColorRect17" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1074,6 +1218,7 @@ offset_right = 22.4286
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.996955, 0, 0.445005, 1)
 
 [node name="ColorRect18" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1083,6 +1228,7 @@ offset_right = 25.1429
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.941176, 0, 0.717647, 1)
 
 [node name="ColorRect19" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1092,6 +1238,7 @@ offset_right = 27.8571
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.832379, 0.279735, 0.790577, 1)
 
 [node name="ColorRect20" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1101,6 +1248,7 @@ offset_right = 30.5714
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.670588, 0.407843, 0.87451, 1)
 
 [node name="ColorRect21" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1110,6 +1258,7 @@ offset_right = 33.2857
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.564706, 0.423529, 1, 1)
 
 [node name="ColorRect22" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1119,6 +1268,7 @@ offset_right = 36.1429
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447059, 0.470588, 1, 1)
 
 [node name="ColorRect23" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1128,6 +1278,7 @@ offset_right = 39.0
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.447745, 0.620903, 1, 1)
 
 [node name="ColorRect24" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1137,6 +1288,7 @@ offset_right = 42.0
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.615686, 0.980392, 1)
 
 [node name="ColorRect25" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1146,6 +1298,7 @@ offset_right = 44.8571
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(2.31028e-06, 0.764207, 0.853241, 1)
 
 [node name="ColorRect26" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1155,6 +1308,7 @@ offset_right = 47.7143
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.870588, 0.768627, 1)
 
 [node name="ColorRect27" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1164,6 +1318,7 @@ offset_right = 50.4286
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0, 0.894118, 0.533333, 1)
 
 [node name="ColorRect28" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1173,6 +1328,7 @@ offset_right = 53.1429
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.448728, 0.87764, 1.15514e-06, 1)
 
 [node name="ColorRect29" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1182,6 +1338,7 @@ offset_right = 56.0
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.741176, 0.803922, 0, 1)
 
 [node name="ColorRect30" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1191,6 +1348,7 @@ offset_right = 58.7143
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.85098, 0.690196, 0, 1)
 
 [node name="ColorRect31" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1200,6 +1358,7 @@ offset_right = 61.5714
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(1, 0.431373, 0.129412, 1)
 
 [node name="ColorRect32" type="ColorRect" parent="Circle/left/top"]
 layout_mode = 0
@@ -1209,3 +1368,9 @@ offset_right = 64.4286
 offset_bottom = 24.8571
 rotation = 3.14159
 pivot_offset = Vector2(1, 0.5)
+color = Color(0.898039, 0, 0.101961, 1)
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="value_changed" from="PitchScale" to="." method="_on_pitch_scale_value_changed"]
+[connection signal="button_down" from="ButtonPh" to="." method="_on_button_ph_button_down"]
+[connection signal="value_changed" from="Phaser" to="." method="_on_phaser_value_changed"]

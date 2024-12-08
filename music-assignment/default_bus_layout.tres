@@ -1,9 +1,14 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://cghe8ovbfiq1m"]
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://cghe8ovbfiq1m"]
+
+[sub_resource type="AudioEffectPhaser" id="AudioEffectPhaser_mgs3h"]
+resource_name = "Phaser"
 
 [sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_x8nsh"]
 resource_name = "SpectrumAnalyzer"
 
 [resource]
+bus/0/effect/0/effect = SubResource("AudioEffectPhaser_mgs3h")
+bus/0/effect/0/enabled = true
 bus/1/name = &"Music"
 bus/1/solo = false
 bus/1/mute = false

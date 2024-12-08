@@ -1,17 +1,37 @@
 extends Control
 
-func set_autoplay(value: bool):
-	pass
 	
 func _on_button_button_down() -> void:
 	if $AudioStreamPlayer2D2.playing:
+		$Button.text = "Play Song"
 		$AudioStreamPlayer2D2.stop()
 	else:
+#		AudioServer.remove_bus_effect(0, 0)
+		AudioServer.set_bus_effect_enabled(0,0, false)
+		$Button.text = "Stop Song"
 		$AudioStreamPlayer2D2.play()
 	pass # Replace with function body.
 	
-#	^^^^^ try find other dependency/if to use idk ^^^^^
-	
+func _on_pitch_scale_value_changed(value: float) -> void:
+	$AudioStreamPlayer2D2.pitch_scale = value
+	pass # Replace with function body.
+
+func _on_button_ph_button_down() -> void:
+	if $ButtonPh.text == "Phaser On":
+		$ButtonPh.text = "Phaser Off"
+		AudioServer.set_bus_effect_enabled(0,0, false)
+#		AudioServer.remove_bus_effect(0, 0)
+	elif $ButtonPh.text == "Phaser Off":
+		$ButtonPh.text = "Phaser On"
+		AudioServer.set_bus_effect_enabled(0,0, true)
+	pass # Replace with function body.
+
+func _on_phaser_value_changed(value: float) -> void:
+	var AudioEffectPhaser = AudioServer.get_bus_effect(0, 0)
+	AudioEffectPhaser.rate_hz = value
+	pass
+
+
 
 @onready
 var spectrum = AudioServer.get_bus_effect_instance(1, 0)
