@@ -1,5 +1,18 @@
 extends Control
 
+func set_autoplay(value: bool):
+	pass
+	
+func _on_button_button_down() -> void:
+	if $AudioStreamPlayer2D2.playing:
+		$AudioStreamPlayer2D2.stop()
+	else:
+		$AudioStreamPlayer2D2.play()
+	pass # Replace with function body.
+	
+#	^^^^^ try find other dependency/if to use idk ^^^^^
+	
+
 @onready
 var spectrum = AudioServer.get_bus_effect_instance(1, 0)
 
@@ -17,6 +30,7 @@ var bottomleftArray = $Circle/left/bottom.get_children()
 var topleftArray = $Circle/left/top.get_children()
 
 
+
 const VU_COUNT = 32
 const HEIGHT = 70
 const FREQ_MAX = 11050.0
@@ -30,7 +44,7 @@ func _ready() -> void:
 	topleftArray.reverse()
 	pass # Replace with function body.
 
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
@@ -62,3 +76,4 @@ func _process(delta: float) -> void:
 		
 	
 	pass
+	
